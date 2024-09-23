@@ -1,0 +1,35 @@
+class Teacher{
+private:
+    double salary; //data hiding or abstraction
+public:
+    //props, or attributes
+    string name;
+    string dept;
+    int age;
+    
+    //methods, or member functions
+    void changeDept(string newDept){
+        this->dept = newDept;
+    }
+    //setter fn
+    void setSalary(double s){
+        this->salary = s;
+    }
+    //getter fn
+    double getSalary(){
+        return salary;
+    }
+};
+
+int main(){
+    Teacher t1;
+    t1.name = "Ayushi";
+    t1.setSalary(250000);
+    cout<<t1.getSalary()<<endl;
+    cout<<t1.name<<endl;
+    return 0;
+}
+
+Finished in 2 ms
+250000
+Ayushi

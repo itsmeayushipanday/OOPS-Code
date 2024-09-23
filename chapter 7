@@ -1,0 +1,36 @@
+MULTIPLE INHERITANCE
+
+class Person {
+public:
+    string name;
+    int age;
+};
+
+class Student {
+public:
+    int roll;
+};
+
+class TA: public Person, public Student{
+public:
+    string area;
+};
+
+int main(){
+    TA g;
+    g.name = "Ayushi";
+    g.age = 22;
+    g.roll = 22;
+    g.area = "abc";
+    cout<<g.name<<endl;
+    cout<<g.age<<endl;
+    cout<<g.roll<<endl;
+    cout<<g.area<<endl;
+    return 0;
+}
+
+Finished in 0 ms
+Ayushi
+22
+22
+abc

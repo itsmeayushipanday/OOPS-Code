@@ -1,0 +1,38 @@
+//INHERITANCE//
+
+class Person {
+public:
+    string name;
+    int age;
+    
+    Person(string n, int a){
+        this->name = n;
+        this->age = a;
+    }
+};
+
+class Student: public Person{
+public:
+    int roll;
+    
+    Student(string n, int a, int roll) : Person(n, a){
+        this->roll = roll;
+    }
+    
+    void get(){
+        cout<<"name: "<<name<<endl;
+        cout<<"age: "<<age<<endl;
+        cout<<"roll no: "<<roll<<endl;
+    }
+};
+
+int main(){
+    Student s1("Ayushi", 22, 22);
+    s1.get();
+    return 0;
+}
+
+Finished in 0 ms
+name: Ayushi
+age: 22
+roll no: 22

@@ -1,0 +1,39 @@
+class Student{
+public:
+    string name;
+    double* cgpaPtr;
+    
+    Student(string n, double cg){
+        this->name = n;
+        cgpaPtr = new double;
+        *cgpaPtr = cg;
+    }
+    Student(Student &obj){
+        this->name = obj.name;
+        cgpaPtr = new double;
+        *cgpaPtr = *obj.cgpaPtr;
+    }
+    
+    void getInfo(){
+        cout<<"name: "<<name<<endl;
+        cout<<"cgpa: "<<*cgpaPtr<<endl;
+    }
+};
+
+int main(){
+    Student s1("Ayushi", 8.7);
+    s1.getInfo();
+    Student s2(s1);
+    *(s2.cgpaPtr) = 8.649;
+    s1.getInfo();
+    s2.getInfo();
+    return 0;
+}
+
+Finished in 3 ms
+name: Ayushi
+cgpa: 8.7
+name: Ayushi
+cgpa: 8.7
+name: Ayushi
+cgpa: 8.649

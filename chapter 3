@@ -21,8 +21,9 @@ public:
     }
     
     //methods, or member functions
-    void changeDept(string newDept){
-        this->dept = newDept;
+    void getInfo(){
+        cout<<"name:"<<name<<endl;
+        cout<<"dept:"<<dept<<endl;
     }
     //setter fn
     void setSalary(double s){
@@ -36,8 +37,10 @@ public:
 
 int main(){
     Teacher t1("Ayushi", "IT", 22, 1000000);
-    cout<<t1.name<<endl;
+    t1.getInfo();
     return 0;
 }
 
-Ayushi
+Finished in 2 ms
+name:Ayushi
+dept:IT
